@@ -23,7 +23,7 @@ var patterns = {
   container: /MKV|AVI/,
   widescreen: /WS/,
   website: /^(\[ ?([^\]]+?) ?\])/,
-  language: /rus\.eng|(TRUE)?FR(ENCH)?|EN(GLISH)?|VOST(FR)?|SP(ANISH)?|GER(MAN)?/i,
+  language: /rus\.eng|(TRUE)?FR(ENCH)?|EN(GLISH)?|VOST(FR)?|SP(ANISH)?|GER(MAN)|MULTI?/i,
   garbage: /1400Mb|3rd Nov| ((Rip))/
 };
 var types = {
