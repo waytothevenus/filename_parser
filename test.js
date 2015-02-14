@@ -388,6 +388,68 @@ var torrents = [
     resolution: '720p',
     group: 'Kybik.v.Kybe',
     episodeName: undefined
+  },
+  {
+    name: 'Qu.est.Ce.Qu.on.A.Fait.Au.Bon.Dieu.2014.FRENCH.DVD',
+    year: 2014,
+    language: 'FRENCH',
+    title: 'Qu est Ce Qu on A Fait Au Bon Dieu',
+    group: 'DVD'
+  },
+  {
+    name: 'The Equalizer 2014 FRENCH SUBFORCED BRRip XviD',
+    year: 2014,
+    quality: 'BRRip',
+    codec: 'XviD',
+    language: 'FRENCH',
+    title: 'The Equalizer',
+    excess: 'SUBFORCED'
+  },
+  {
+    name: 'Lucy (2014) [1080p] MULTi BluRay x264-PopHD',
+    year: 2014,
+    resolution: '1080p',
+    quality: 'BluRay',
+    codec: 'x264',
+    group: 'PopHD',
+    language: 'MULTI',
+    title: 'Lucy',
+    excess: '[]'
+  },
+  {
+    name: 'Fury.2014.FRENCH.BRRip.XviD-DesTroY',
+    year: 2014,
+    quality: 'BRRip',
+    codec: 'XviD',
+    group: 'DesTroY',
+    language: 'FRENCH',
+    title: 'Fury'
+  },
+  {
+    name: 'Gone.Girl.2014.FRENCH.BRRip.XviD-CARPEDIEM',
+    year: 2014,
+    quality: 'BRRip',
+    codec: 'XviD',
+    group: 'CARPEDIEM',
+    language: 'FRENCH',
+    title: 'Gone Girl'
+  },
+  {
+    name: 'Predestination 2014 TRUEFRENCH SUBFORCED BRRip.Xvid',
+    year: 2014,
+    quality: 'BRRip',
+    codec: 'Xvid',
+    language: 'TRUEFRENCH',
+    title: 'Predestination',
+    excess: 'SUBFORCED'
+  },
+  {
+    name: 'The Salvation French DVDRip XviD-UTT',
+    quality: 'DVDRip',
+    codec: 'XviD',
+    group: 'UTT',
+    language: 'FRENCH',
+    title: 'The Salvation'
   }
 ];
 
