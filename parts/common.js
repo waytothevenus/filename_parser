@@ -23,7 +23,7 @@ var patterns = {
   container: /MKV|AVI/,
   widescreen: /WS/,
   website: /^(\[ ?([^\]]+?) ?\])/,
-  language: /rus\.eng|(TRUE)?FR(ENCH)?|EN(GLISH)?|VOST(FR)?|SP(ANISH)?|GER(MAN)|MULTI?/i,
+  language: /RUS(?:SIAN)?|(?:TRUE)?FR(?:ENCH)?|EN(?:G(?:LISH)?)?|VOST(?:FR)?|SP(?:ANISH)?|GER(?:MAN)?|MULTI/i,
   garbage: /1400Mb|3rd Nov| ((Rip))/
 };
 var types = {
@@ -39,10 +39,13 @@ var types = {
 var torrent;
 
 core.on('setup', function (data) {
+
+
   torrent = data;
 });
 
 core.on('start', function() {
+  console.log('common');
   var key, match, index, clean, part;
 
   for(key in patterns) {
@@ -83,6 +86,8 @@ core.on('start', function() {
         raw: match[index.raw],
         clean: clean
       };
+
+      console.log( part) ;
 
       if(key === 'episode') {
         core.emit('map', torrent.name.replace(part.raw, '{episode}'));
