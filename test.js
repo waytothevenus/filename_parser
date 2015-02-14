@@ -306,7 +306,7 @@ var torrents = [
   {
     name: 'Interstellar (2014) CAM ENG x264 AAC-CPG',
     quality: 'CAM',
-    excess: 'ENG'
+    language: 'ENG'
   },
   {
     name: 'Guardians of the Galaxy (2014) Dual Audio DVDRip AVI',
@@ -383,7 +383,8 @@ var torrents = [
     title: 'Community',
     season: 2,
     episode: 20,
-    language: 'rus.eng',
+    language: 'RUS',
+    language2: 'ENG',
     resolution: '720p',
     group: 'Kybik.v.Kybe',
     episodeName: undefined
