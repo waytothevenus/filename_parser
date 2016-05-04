@@ -71,3 +71,6 @@ ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
 Simply run
 ```node test.js
 ``
+
+## Credits
+https://github.com/jzjzjzj/parse-torrent-name
