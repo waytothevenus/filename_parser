@@ -13,7 +13,7 @@ var torrents = [
     quality: 'HDTV',
     codec: 'x264',
     audio: undefined,
-    group: 'ASAP[ettv]',
+    group: 'ASAP',
     extended: undefined,
     hardcoded: undefined,
     website: undefined,
@@ -37,7 +37,7 @@ var torrents = [
     group: 'EVO'
   },
   {
-    name: 'The Big Bang Theory S08E06 HDTV XviD-LOL [eztv]',
+    name: 'The Big Bang Theory S08E06 HDTV XviD-LOL',
     season: 8,
     episode: 6,
     quality: 'HDTV',
@@ -377,7 +377,7 @@ var torrents = [
     language: 'MULTI-VF2',
     title: 'Le Labyrinthe',
     year: 2014,
-    group: 'PopHD (The.Maze.Runner)'
+    group: 'PopHD'
   }
 ];
 

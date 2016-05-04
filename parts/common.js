@@ -11,7 +11,7 @@ var patterns = {
   episode: /([Eex]([0-9]{2})(?:[^0-9]|$))/,
   year: /([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)/,
   resolution: /(([0-9]{3,4}(?:p|i)))[^M]/,
-  quality: /hdtv|bluray|(?:b[dr]|dvd|hd|tv)rip|web-?(?:dl|rip)/,
+  quality: /hdtv|bluray|(?:b[dr]|dvd|hd|tv)rip|web-?(?:dl|rip)/i,
   codec: /divx|xvid|(?:x|h)[-\. ]?26(?:4|5)|avc|hevc/i,
   audio: /MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|AAC(?:\.?2\.0)?|AC3(?:\.5\.1)?/,
   group: /(- ?([^-]+))$/,
@@ -74,6 +74,8 @@ core.on('start', function() {
         if(clean.match(/[^ ]+ [^ ]+ .+/)) {
           key = 'episodeName';
         }
+        clean = clean.replace(/ *\([^)]*\) */, "");
+        clean = clean.replace(/ *\[[^)]*\] */, "");
       }
 
       if(key === 'language') {
