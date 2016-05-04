@@ -1,4 +1,4 @@
-# parse-torrent-name [![Build Status](https://travis-ci.org/jzjzjzj/parse-torrent-name.svg?branch=master)](https://travis-ci.org/jzjzjzj/parse-torrent-name) [![Code Climate](https://codeclimate.com/github/jzjzjzj/parse-torrent-name/badges/gpa.svg)](https://codeclimate.com/github/jzjzjzj/parse-torrent-name)
+# parse-torrent-name 
 
 Parses torrent name of a movie or TV show.
 
@@ -23,7 +23,6 @@ Parses torrent name of a movie or TV show.
 - season
 - title
 - website
-- widescreen
 - year
 
 ## Install:
@@ -67,3 +66,8 @@ ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
   title: 'AL 288-1' }
 */
 ```
+
+## Test
+Simply run
+```node test.js
+``

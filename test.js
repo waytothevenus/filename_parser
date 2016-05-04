@@ -16,7 +16,6 @@ var torrents = [
     group: 'ASAP[ettv]',
     extended: undefined,
     hardcoded: undefined,
-    widescreen: undefined,
     website: undefined,
     excess: undefined
   },
@@ -63,33 +62,12 @@ var torrents = [
     excess: undefined
   },
   {
-    name: 'Hercules (2014) WEBDL DVDRip XviD-MAX',
-    quality: 'WEBDL DVDRip',
-    excess: undefined
-  },
-  {
-    name: 'WWE Hell in a Cell 2014 PPV WEB-DL x264-WD -={SPARROW}=-',
-    quality: 'PPV WEB-DL',
-    group: 'WD -={SPARROW}=-',
-    excess: undefined
-  },
-  {
-    name: 'UFC.179.PPV.HDTV.x264-Ebi[rartv]',
-    title: 'UFC 179',
-    quality: 'PPV.HDTV'
-  },
-  {
     name: 'Marvels Agents of S H I E L D S02E05 HDTV x264-KILLERS [eztv]',
     title: 'Marvels Agents of S H I E L D'
   },
   {
     name: 'X-Men.Days.of.Future.Past.2014.1080p.WEB-DL.DD5.1.H264-RARBG',
     title: 'X-Men Days of Future Past'
-  },
-  {
-    name: 'Guardians Of The Galaxy 2014 R6 720p HDCAM x264-JYK',
-    region: 'R6',
-    quality: 'HDCAM'
   },
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
@@ -101,10 +79,6 @@ var torrents = [
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
     title: 'Marvels Agents of S.H.I.E.L.D.'
-  },
-  {
-    name: 'Guardians of the Galaxy (CamRip / 2014)',
-    excess: undefined
   },
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
@@ -121,10 +95,6 @@ var torrents = [
   {
     name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
     quality: 'BRRip'
-  },
-  {
-    name: 'These.Final.Hours.2013.WBBRip XViD',
-    quality: 'WBBRip'
   },
   {
     name: 'Downton Abbey 5x06 HDTV x264-FoV [eztv]',
@@ -158,13 +128,6 @@ var torrents = [
   },
   {
     name: 'The Flash 2014 S01E01 HDTV x264-LOL[ettv]',
-    excess: undefined
-  },
-  {
-    name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
-    audio: 'Dual-Audio',
-    garbage: '1400Mb',
-    group: undefined,
     excess: undefined
   },
   {
@@ -244,11 +207,6 @@ var torrents = [
     quality: 'BluRay'
   },
   {
-    name: 'WWE Monday Night Raw 3rd Nov 2014 HDTV x264-Sir Paul',
-    title: 'WWE Monday Night Raw',
-    garbage: '3rd Nov'
-  },
-  {
     name: 'Jack.And.The.Cuckoo-Clock.Heart.2013.BRRip XViD',
     title: 'Jack And The Cuckoo-Clock Heart',
     group: undefined,
@@ -257,11 +215,6 @@ var torrents = [
   {
     name: 'WWE Hell in a Cell 2014 HDTV x264 SNHD',
     group: 'SNHD',
-    excess: undefined
-  },
-  {
-    name: 'Dracula.Untold.2014.TS.XViD.AC3.MrSeeN-SiMPLE',
-    group: 'MrSeeN-SiMPLE',
     excess: undefined
   },
   {
@@ -287,26 +240,9 @@ var torrents = [
     excess: undefined
   },
   {
-    name: 'The Shaukeens 2014 Hindi (1CD) DvDScr x264 AAC...Hon3y',
-    quality: 'DvDScr',
-    excess: ['Hindi', '1CD']
-  },
-  {
-    name: 'The Shaukeens (2014) 1CD DvDScr Rip x264 [DDR]',
-    quality: 'DvDScr',
-    garbage: 'Rip',
-    group: '[DDR]',
-    excess: '1CD'
-  },
-  {
     name: 'Annabelle.2014.1080p.PROPER.HC.WEBRip.x264.AAC.2.0-RARBG',
     audio: 'AAC.2.0',
     group: 'RARBG'
-  },
-  {
-    name: 'Interstellar (2014) CAM ENG x264 AAC-CPG',
-    quality: 'CAM',
-    language: 'ENG'
   },
   {
     name: 'Guardians of the Galaxy (2014) Dual Audio DVDRip AVI',
@@ -319,13 +255,6 @@ var torrents = [
     name: 'Eliza Graves (2014) Dual Audio WEB-DL 720p MKV x264',
     container: 'MKV',
     excess: undefined
-  },
-  {
-    name: 'WWE Monday Night Raw 2014 11 10 WS PDTV x264-RKOFAN1990 -={SPARR',
-    widescreen: true,
-    quality: 'PDTV',
-    group: 'RKOFAN1990 -={SPARR',
-    excess: ['11', '10']
   },
   {
     name: 'Sons.of.Anarchy.S01E03',
@@ -377,17 +306,6 @@ var torrents = [
     quality: 'HDTV',
     codec: 'X264',
     group: 'DIMENSION'
-  },
-  {
-    name: 'Community.s02e20.rus.eng.720p.Kybik.v.Kybe',
-    title: 'Community',
-    season: 2,
-    episode: 20,
-    language: 'RUS',
-    language2: 'ENG',
-    resolution: '720p',
-    group: 'Kybik.v.Kybe',
-    episodeName: undefined
   },
   {
     name: 'Qu.est.Ce.Qu.on.A.Fait.Au.Bon.Dieu.2014.FRENCH.DVD',
@@ -450,6 +368,16 @@ var torrents = [
     group: 'UTT',
     language: 'FRENCH',
     title: 'The Salvation'
+  },
+  {
+    name: 'Le Labyrinthe 2014 Multi-VF2 1080p BluRay x264-PopHD (The.Maze.Runner)',
+    quality: 'BluRay',
+    codec: 'x264',
+    resolution: '1080p',
+    language: 'MULTI-VF2',
+    title: 'Le Labyrinthe',
+    year: 2014,
+    group: 'PopHD (The.Maze.Runner)'
   }
 ];
 

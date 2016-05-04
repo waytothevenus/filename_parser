@@ -10,21 +10,19 @@ var patterns = {
   season: /([Ss]?([0-9]{1,2}))[Eex]/,
   episode: /([Eex]([0-9]{2})(?:[^0-9]|$))/,
   year: /([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)/,
-  resolution: /(([0-9]{3,4}p))[^M]/,
-  quality: /(?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[rR]Rip|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRi[pP]|DVDRIP|CamRip|W[EB]B[rR]ip|[Bb]lu[Rr]ay|DvDScr|hdtv/,
-  codec: /xvid|x264|h\.?264/i,
+  resolution: /(([0-9]{3,4}(?:p|i)))[^M]/,
+  quality: /hdtv|bluray|(?:b[dr]|dvd|hd|tv)rip|web-?(?:dl|rip)/,
+  codec: /divx|xvid|(?:x|h)[-\. ]?26(?:4|5)|avc|hevc/i,
   audio: /MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|AAC(?:\.?2\.0)?|AC3(?:\.5\.1)?/,
-  group: /(- ?([^-]+(?:-={[^-]+-?$)?))$/,
+  group: /(- ?([^-]+))$/,
   region: /R[0-9]/,
   extended: /EXTENDED/,
   hardcoded: /HC/,
   proper: /PROPER/,
   repack: /REPACK/,
-  container: /MKV|AVI/,
-  widescreen: /WS/,
+  container: /MKV|AVI|MP4|mkv|avi|mp4/,
   website: /^(\[ ?([^\]]+?) ?\])/,
-  language: /rus|RUS|(?:TRUE)?FR(?:ENCH)?|(?:True)?Fr(?:ench)?|EN(?:G(?:LISH)?)?|[Ee]n(?:g(?:lish)?)?|VOST(?:F[Rr])?|[Vv]ost(?:[Ff]r)?|SPANISH|[Ss]panish|GERMAN|[Gg]erman|MULT[Ii]|[Mm]ulti/g,
-  garbage: /1400Mb|3rd Nov| ((Rip))/
+  language: /(?:TRUE)?FR(?:ENCH)?|EN(?:G(?:LISH)?)?|VOST(?:FR)?|MULTI(?:Lang|Truefrench|\-VF2)?|SUBFRENCH/gi
 };
 var types = {
   season: 'integer',
@@ -33,8 +31,7 @@ var types = {
   extended: 'boolean',
   hardcoded: 'boolean',
   proper: 'boolean',
-  repack: 'boolean',
-  widescreen: 'boolean'
+  repack: 'boolean'
 };
 var torrent;
 
