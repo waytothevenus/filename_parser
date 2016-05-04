@@ -69,7 +69,8 @@ ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
 
 ## Test
 Simply run
-```node test.js
+```bash
+$ node test.js
 ```
 
 ## Credits
