@@ -1,6 +1,6 @@
 {
   "name": "torrent-name-parser",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Parses torrent name of a movie or TV show.",
   "repository": {
     "type": "git",
