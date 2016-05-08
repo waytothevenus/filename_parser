@@ -1,4 +1,4 @@
-# parse-torrent-name 
+# torrent-name-parser 
 
 Parses torrent name of a movie or TV show.
 
@@ -27,15 +27,15 @@ Parses torrent name of a movie or TV show.
 
 ## Install:
 ```bash
-$ npm install parse-torrent-name
+$ npm install torrent-name-parser 
 ```
 
 ## Usage:
 ```javascript
 
-var ptn = require('parse-torrent-name');
+var tnp = require('torrent-name-parser');
 
-ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
+tnp('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
 /*
 { year: 2014,
   resolution: '1080p',
@@ -45,7 +45,7 @@ ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
   title: 'Captain Russia The Summer Soldier' }
 */
 
-ptn('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]');
+tnp('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]');
 /*
 { season: 5,
   episode: 2,
@@ -56,15 +56,16 @@ ptn('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]');
   title: 'The Staying Alive' }
 */
 
-/* You can also add custom regex if you want more or different extraction */
+/* You can also add custom regex if you want more or different extraction 
+The part type is optional. Default is the matching string */
 
-ptn.configure({newPart: /someRegex/, existingPart: /overridingRegex/}, 
+tnp.configure({newPart: /someRegex/, existingPart: /overridingRegex/}, 
 {newPart: 'partType');
 
 /* or */
 
-console.log(ptn('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]', 
-{isRartv: /rar(tv|bg)/}, {isRartv: 'boolean'}));
+tnp('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]', 
+{isRartv: /rar(tv|bg)/}, {isRartv: 'boolean'});
 /*
 { season: 5,
   episode: 2,
