@@ -42,7 +42,7 @@ var torrents = [
     episode: 6,
     quality: 'HDTV',
     codec: 'XviD',
-    group: 'LOL [eztv]'
+    group: 'LOL'
   },
   {
     name: '22 Jump Street (2014) 720p BrRip x264 - YIFY',

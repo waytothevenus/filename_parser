@@ -33,19 +33,37 @@ var types = {
   proper: 'boolean',
   repack: 'boolean'
 };
+var currentPatterns;
+var currentTypes;
 var torrent;
 
-core.on('setup', function (data) {
+core.on('configure', function(config) {
+  for (var key in config.patterns) {
+    patterns[key] = config.patterns[key]; // override or create specified keys
+  }
+  for (var key in config.types) {
+    types[key] = config.types[key]; // override or create specified keys
+  }
+});
 
+core.on('setup', function (data, config) {
   torrent = data;
+  currentPatterns = patterns;
+  currentTypes = types;
+  for (var key in config.patterns) {
+    currentPatterns[key] = config.patterns[key]; // temporarily override or create specified keys
+  }
+  for (var key in config.types) {
+    currentTypes[key] = config.types[key]; // temporarily override or create specified keys
+  }
 });
 
 core.on('start', function() {
   var key, match, index, clean, part;
 
-  for(key in patterns) {
-    if(patterns.hasOwnProperty(key)) {
-      if(!(match = torrent.name.match(patterns[key]))) {
+  for(key in currentPatterns) {
+    if(currentPatterns.hasOwnProperty(key)) {
+      if(!(match = torrent.name.match(currentPatterns[key]))) {
         continue;
       }
 
@@ -54,19 +72,19 @@ core.on('start', function() {
         clean: match[1] ? 2 : 0
       };
 
-      if(types[key] && types[key] === 'boolean') {
+      if(currentTypes[key] && currentTypes[key] === 'boolean') {
         clean = true;
       }
       else {
         clean = match[index.clean];
 
-        if(types[key] && types[key] === 'integer') {
+        if(currentTypes[key] && currentTypes[key] === 'integer') {
           clean = parseInt(clean, 10);
         }
       }
 
       if(key === 'group') {
-        if(clean.match(patterns.codec) || clean.match(patterns.quality)) {
+        if(clean.match(currentPatterns.codec) || clean.match(currentPatterns.quality)) {
           continue;
         }
 
@@ -81,7 +99,7 @@ core.on('start', function() {
       if(key === 'language') {
 
         var i = 0;
-        while( match = patterns.language.exec(torrent.name) ) {
+        while( match = currentPatterns.language.exec(torrent.name) ) {
 
           var separator = torrent.name.charAt(match.index-1); // separators are usually - + _ . \s
           if(match.index == 0 || !/[-+_.\s]/.test(separator) || separator !== torrent.name.charAt(match.index + match[0].length)) { // & language usually not in first
