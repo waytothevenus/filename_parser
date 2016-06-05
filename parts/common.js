@@ -7,11 +7,11 @@ var core = require('../core');
  * In case of two groups - 1st is raw, 2nd is clean.
  */
 var patterns = {
-  season: /([Ss]?([0-9]{1,2}))[Eex]/,
+  season: /([Ss]?([0-9]{1,2}))[Eex]|([Ss]([0-9]{1,2}))/,
   episode: /([Eex]([0-9]{2})(?:[^0-9]|$))/,
   year: /([\[\(]?((?:19[0-9]|20[01])[0-9])[\]\)]?)/,
   resolution: /(([0-9]{3,4}(?:p|i)))[^M]/,
-  quality: /hdtv|bluray|dvd|(?:b[dr]|dvd|hd|tv)rip|web-?(?:dl|rip)/i,
+  quality: /hdtv|bluray|(?:b[dr]|dvd|hd|tv)rip|web-?(?:dl|rip)|dvd/i,
   codec: /divx|xvid|(?:x|h)[-\. ]?26(?:4|5)|avc|hevc/i,
   audio: /MP3|DD5\.?1|Dual[\- ]Audio|LiNE|DTS|AAC(?:\.?2\.0)?|AC3(?:\.5\.1)?/,
   group: /(- ?([^-]+))$/,
@@ -79,7 +79,7 @@ core.on('start', function() {
         clean = match[index.clean];
 
         if(currentTypes[key] && currentTypes[key] === 'integer') {
-          clean = parseInt(clean, 10);
+          clean = parseInt(clean.replace(/[^0-9.]/, ""), 10);
         }
       }
 

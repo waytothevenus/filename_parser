@@ -312,7 +312,7 @@ var torrents = [
     year: 2014,
     language: 'FRENCH',
     title: 'Qu est Ce Qu on A Fait Au Bon Dieu',
-    group: 'DVD'
+    quality: 'DVD'
   },
   {
     name: 'The Equalizer 2014 FRENCH SUBFORCED BRRip XviD',
