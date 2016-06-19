@@ -22,7 +22,7 @@ var patterns = {
   repack: /REPACK/,
   container: /MKV|AVI|MP4|mkv|avi|mp4/,
   website: /^(\[ ?([^\]]+?) ?\])/,
-  language: /(?:TRUE)?FR(?:ENCH)?|EN(?:G(?:LISH)?)?|VOST(?:F(?:R)?)?|MULTI(?:Lang|Truefrench|\-VF2)?|SUBFRENCH/gi
+  language: /(?:TRUE)?FR(?:ENCH)?|EN(?:G(?:LISH)?)?|VOST(?:(F(?:R)?)|A)?|MULTI(?:Lang|Truefrench|\-VF2)?|SUBFRENCH/gi
 };
 var types = {
   season: 'integer',
